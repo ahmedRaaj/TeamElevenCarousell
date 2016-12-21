@@ -20,6 +20,7 @@
         <activity android:name=".EditActivity" />
         <activity android:name=".DeleteActivity" />
         <activity android:name=".ListByItems" />
+        <activity android:name=".categorylistactivity" />
         <activity android:name=".ItemDetailActivity"></activity>
     </application>
 

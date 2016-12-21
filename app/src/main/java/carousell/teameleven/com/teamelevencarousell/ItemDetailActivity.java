@@ -62,5 +62,10 @@ public class ItemDetailActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+//        Button delete = (Button) findViewById(R.id.detail_btn_delete);
+//        delete.setOnClickListener(new View.OnClickListener(){
+//
+//        });
     }
 }
