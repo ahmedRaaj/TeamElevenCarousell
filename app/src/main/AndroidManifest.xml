@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".categorylistactivity"></activity>
+        <activity android:name=".InsertActivity" />
+        <activity android:name=".EditActivity" />
+        <activity android:name=".DeleteActivity" />
+        <activity android:name=".ListByItems" />
+        <activity android:name=".ItemDetailActivity"></activity>
     </application>
 
 </manifest>
