@@ -50,6 +50,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/detail_etxt_description"/>
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modify"
+            android:id="@+id/detail_btn_modify"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:id="@+id/detail_btn_delete"/>
+    </LinearLayout>
 
 </LinearLayout>
