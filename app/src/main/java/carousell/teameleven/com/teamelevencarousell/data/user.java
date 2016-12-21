@@ -23,13 +23,14 @@ public class User extends java.util.HashMap<String,String> {
 
     public User(){}
 
-    public static List<String> listUser() {
-        List<String> list = new ArrayList<String>();
+    public static List<User> listUser() {
+        List<User> list = new ArrayList<User>();
         try {
             JSONArray a = JSONParser.getJSONArrayFromUrl(host+"/User");
             for (int i=0; i<a.length(); i++) {
-                String c = a.getString(i);
-                list.add(c);
+                JSONObject b = a.getJSONObject(i);
+                list.add(new User(b.getString("UserId"), b.getString("UserName"),
+                        b.getString("UserType")));
             }
         } catch (Exception e) {
         }
