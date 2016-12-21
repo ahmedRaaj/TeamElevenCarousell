@@ -14,7 +14,7 @@ import carousell.teameleven.com.teamelevencarousell.data.Items;
 
 public class ItemDetailActivity extends AppCompatActivity {
 
-    final  static int []view = {R.id.edit_etxt_name,R.id.edit_etxt_price,R.id.edit_etxt_description};
+    final  static int []view = {R.id.detail_edittxt_name,R.id.edit_etxt_price,R.id.detail_edittxt_description};
     final static String[]key={"name","price","description"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
