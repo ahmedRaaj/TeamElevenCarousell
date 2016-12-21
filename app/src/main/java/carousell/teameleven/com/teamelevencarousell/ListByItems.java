@@ -1,17 +1,25 @@
 package carousell.teameleven.com.teamelevencarousell;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 
-public class ListByItems extends AppCompatActivity {
+import java.util.List;
+
+import carousell.teameleven.com.teamelevencarousell.data.Items;
+
+public class ListByItems extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_by_items);
+        List<String> values= Items.listItems();
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,values);
+        setListAdapter(adapter);
     }
 
     @Override
@@ -26,13 +34,13 @@ public class ListByItems extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                startActivity(new Intent(this, ));
+                startActivity(new Intent(this,InsertActivity.class ));
                 return true;
             case R.id.item2:
-                startActivity(new Intent(this, ));
+                startActivity(new Intent(this,EditActivity.class ));
                 return true;
             case R.id.item3:
-                startActivity(new Intent(this, ));
+                startActivity(new Intent(this,DeleteActivity.class ));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
