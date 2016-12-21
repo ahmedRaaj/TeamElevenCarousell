@@ -30,10 +30,10 @@ public class MyAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = (LayoutInflater) getContext()
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(resource, null);
-        final String eid = items.get(position);
-        if (eid != null) {
-            TextView e = (TextView) v.findViewById(R.id.textView);
-            e.setText(eid);
+        final String cateId = items.get(position);
+        if (cateId != null) {
+            TextView e = (TextView) v.findViewById(R.id.textViewInRow);
+            e.setText(cateId);
         }
         return v;
     }
