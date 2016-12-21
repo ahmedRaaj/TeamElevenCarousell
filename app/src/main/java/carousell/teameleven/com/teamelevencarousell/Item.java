@@ -20,6 +20,7 @@ public class Item extends HashMap<String, String> {
         }
         return(parts);
     }
+
     public static Item getItem(String stringindex){
         ArrayList<Item> items;
         items=getParts();
@@ -27,7 +28,13 @@ public class Item extends HashMap<String, String> {
         Item i=items.get(index);
         return i;
     }
-
+    public Item(){
+        put("id",null);
+        put("name",null);
+        put("description",null);
+        put("cost",null);
+        put("categoryID",null);
+    }
     public Item(String id, String name, String description, int price, int categoryid) {
         put("id", id);
         put ("name", name);
